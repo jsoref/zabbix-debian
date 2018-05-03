@@ -3,7 +3,7 @@
 if [ "$1" = "configure" ]; then
 
     if [ -d /etc/zabbix/web ]; then
-       chown www-data.root /etc/zabbix/web
+       chown www-data:root /etc/zabbix/web
        chmod 755 /etc/zabbix/web
     fi
 
