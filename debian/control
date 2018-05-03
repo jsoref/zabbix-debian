@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9),
                quilt (>= 0.40),
                pkg-config,
                libsnmp-dev,
-               libmysqlclient-dev | default-libmysqlclient-dev,
+               default-libmysqlclient-dev | libmysqlclient-dev,
                libpq-dev,
                libsqlite3-dev,
                libcurl4-openssl-dev,
@@ -63,7 +63,7 @@ Description: Zabbix network monitoring solution - sender
 
 Package: zabbix-server-mysql
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, mysql-client | virtual-mysql-client, fping, adduser, lsb-base
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-mysql-client | mysql-client | virtual-mysql-client, fping, adduser, lsb-base
 Pre-Depends: debconf
 Recommends: virtual-mysql-server, snmpd
 Suggests: zabbix-frontend-php, logrotate
@@ -109,7 +109,7 @@ Description: Zabbix network monitoring solution - PHP front-end
 
 Package: zabbix-proxy-mysql
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, mysql-client | virtual-mysql-client, fping, adduser, lsb-base
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-mysql-client | mysql-client | virtual-mysql-client, fping, adduser, lsb-base
 Recommends: virtual-mysql-server
 Suggests: logrotate
 Conflicts: zabbix-proxy-pgsql, zabbix-proxy-sqite3
