@@ -156,7 +156,7 @@ Description: Zabbix network monitoring solution - proxy (SQLite3)
 
 Package: zabbix-java-gateway
 Architecture: all
-Depends: ${misc:Depends}, java6-runtime-headless | java7-runtime-headless | java8-runtime-headless, adduser, lsb-base
+Depends: ${misc:Depends}, default-jre-headless | openjdk-11-jre-headless | java6-runtime-headless | java7-runtime-headless | java8-runtime-headless | java9-runtime-headless, adduser, lsb-base
 Description: Zabbix network monitoring solution - java-gateway
  Zabbix is the ultimate enterprise-level software designed for
  real-time monitoring of millions of metrics collected from tens of
