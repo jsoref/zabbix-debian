@@ -11,8 +11,8 @@ case "$1" in
         if [ -f /etc/apache2/conf.d/zabbix ]; then
             rm -f /etc/apache2/conf.d/zabbix
         elif [ -f /etc/apache2/conf-available/zabbix.conf ]; then
-            if [ -f /etc/apache2/conf-enabled/zabbix.conf ]; then
-                /usr/sbin/a2disconf zabbix.conf
+            if [ -f /etc/apache2/conf-enabled/zabbix.conf ] && command -v a2disconf > /dev/null 2> /dev/null; then
+                a2disconf zabbix.conf
             fi
             rm -f /etc/apache2/conf-available/zabbix.conf
         fi
