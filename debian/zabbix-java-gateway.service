@@ -1,6 +1,5 @@
 [Unit]
 Description=Zabbix Java Gateway
-After=syslog.target
 After=network.target
 
 [Service]
